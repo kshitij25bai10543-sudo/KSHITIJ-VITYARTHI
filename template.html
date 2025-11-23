@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Assignment</title>
+</head>
+<body>
+    <h1>Add New Assignment</h1>
+    <form method="POST">
+        <label for="title">Title (Required):</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="course">Course:</label><br>
+        <input type="text" id="course" name="course"><br><br>
+
+        <label for="due_date">Due Date (Required):</label><br>
+        <input type="date" id="due_date" name="due_date" required><br><br>
+
+        <label for="due_time">Due Time (Required):</label><br>
+        <input type="time" id="due_time" name="due_time" value="23:59" required><br><br>
+
+        <label for="priority">Priority:</label><br>
+        <select id="priority" name="priority">
+            <option value="High">High</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Low">Low</option>
+        </select><br><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description"></textarea><br><br>
+
+        <input type="submit" value="Add Assignment">
+    </form>
+    <p><a href="{{ url_for('assignment_list') }}">Back to Dashboard</a></p>
+</body>
+</html>
